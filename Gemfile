@@ -7,6 +7,10 @@ gem 'rails', '4.0.0'
 # gem 'sqlite3'
 gem 'mysql2'
 
+# Use Haml for templates
+gem 'erb2haml'
+gem 'haml-rails'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass'
