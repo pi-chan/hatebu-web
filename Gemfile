@@ -7,6 +7,13 @@ gem 'rails', '4.0.0'
 # gem 'sqlite3'
 gem 'mysql2'
 
+# privacy
+gem 'figaro'
+
+# Use devise and omniauth
+gem 'devise'
+gem 'omniauth-hatena'
+
 # Use Haml for templates
 gem 'erb2haml'
 gem 'haml-rails'
