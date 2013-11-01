@@ -26,4 +26,9 @@ HatebuWeb::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  Devise.setup do |config|
+    config.omniauth :hatena, ENV['HATENA_CONSUMER_KEY'], ENV['HATENA_CONSUMER_SECRET'], scope: "write_public,read_public"
+  end
+  
 end
