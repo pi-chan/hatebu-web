@@ -10,12 +10,17 @@ class User < ActiveRecord::Base
   end
 
   def self.find_for_hatena_oauth(auth, signed_in_resource=nil)
-    user = User.where(:provider => auth.provider, :uid => auth.credentials.token).first
-    unless user
+    user = User.where(:provider => auth.provider, :uid => auth.uid).first
+    if user
+      user.update(token:auth.credentials.token,
+                  secret:auth.credentials.secret)
+
+    else
       user = User.create(name:auth.uid,
+                         uid:auth.uid,
                          provider:auth.provider,
-                         uid:auth.credentials.token,
-                         password:auth.credentials.secret)
+                         token:auth.credentials.token,
+                         secret:auth.credentials.secret)
     end
     user
   end

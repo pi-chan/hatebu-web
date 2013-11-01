@@ -8,7 +8,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
       t.string:uid
       t.string:name
       t.string:provider
-      t.string:password
+      t.string:token
+      t.string:secret
       
       t.timestamps
     end
