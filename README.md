@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/xoyip/hatebu-web.png?branch=master)](https://travis-ci.org/xoyip/hatebu-web)
-
 [![Coverage Status](https://coveralls.io/repos/xoyip/hatebu-web/badge.png)](https://coveralls.io/r/xoyip/hatebu-web)
+[![Code Climate](https://codeclimate.com/github/xoyip/hatebu-web.png)](https://codeclimate.com/github/xoyip/hatebu-web)
 
 Sample application for Hatena OAuth.
 
