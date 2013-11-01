@@ -1,8 +1,9 @@
+require 'coveralls'
+Coveralls.wear!
+
 require 'rubygems'
 require 'spork'
 require 'debugger'
-require 'coveralls'
-Coveralls.wear!
 
 Spork.prefork do
   # This file is copied to spec/ when you run 'rails generate rspec:install'
@@ -105,7 +106,11 @@ Spork.each_run do
   unless ENV['DRB']
     require 'simplecov'
     require 'simplecov-rcov'
-    SimpleCov.formatter = SimpleCov::Formatter::RcovFormatter
+    SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+                                                               SimpleCov::Formatter::HTMLFormatter,
+                                                               SimpleCov::Formatter::RcovFormatter,
+                                                               Coveralls::SimpleCov::Formatter
+                                                              ]
     SimpleCov.start 'rails'
   end
   
