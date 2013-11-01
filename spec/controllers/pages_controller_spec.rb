@@ -32,6 +32,11 @@ describe PagesController do
         get 'home'
         expect(response).to render_template("home")
       end
+
+      it "assigns @form" do
+        get 'home'
+        expect(assigns(:form).class).to eq(BookmarkUrlForm)
+      end
     end
 
     context "GET 'login'" do
