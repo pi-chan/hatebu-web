@@ -91,7 +91,6 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  FactoryGirl.reload
   Dir.glob("spec/**/*steps.rb") {|f| load f, true}
 
   if Spork.using_spork?

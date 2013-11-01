@@ -28,9 +28,6 @@ group :development, :test do
   gem 'turnip'
   gem 'selenium-webdriver'
   gem 'debugger'
-end
-
-group :assets do
   gem 'erb2haml'
   gem 'haml-rails'
   gem 'coffee-rails', '~> 4.0.0'
