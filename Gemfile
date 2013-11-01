@@ -8,7 +8,7 @@ gem 'omniauth-hatena'
 
 group :development do
   gem 'growl'
-  gem 'guard-rspec'
+  gem 'guard-rspec', '~> 3.0.2'
   gem 'guard-spork'
   gem 'database_cleaner'
   gem 'quiet_assets'

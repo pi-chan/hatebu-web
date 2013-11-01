@@ -33,4 +33,9 @@ HatebuWeb::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  Devise.setup do |config|
+    config.omniauth :hatena, ENV['HATENA_CONSUMER_KEY'], ENV['HATENA_CONSUMER_SECRET'], scope: "write_public,read_public"
+  end
+  
 end
