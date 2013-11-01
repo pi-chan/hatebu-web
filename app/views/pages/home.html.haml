@@ -1,4 +1,5 @@
-%h1 hatena-web home
+%h1 #{@user.name} home
+= link_to('Log out', destroy_user_session_path)
 
-%a(href="#{user_omniauth_authorize_path(:hatena)}")
-  Login with Hatena
+  
+    

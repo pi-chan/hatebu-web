@@ -1,0 +1,4 @@
+%h1 Hatena web integration
+- unless user_signed_in?
+  %a(href="#{user_omniauth_authorize_path(:hatena)}")
+    Login with Hatena
