@@ -87,7 +87,10 @@ Spork.prefork do
     config.after(:each) do
       DatabaseCleaner.clean
     end
-    
+
+    config.expect_with :rspec do |c|
+      c.syntax = :expect
+    end
   end
 
 end
