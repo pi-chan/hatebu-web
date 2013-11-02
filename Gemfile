@@ -32,7 +32,7 @@ group :development, :test do
   gem 'haml-rails'
   gem 'coffee-rails', '~> 4.0.0'
   gem 'sass-rails', '~> 4.0.0'
-  gem 'bootstrap-sass'
+  gem 'bootstrap-sass', '~> 2.3'
   gem 'uglifier', '>= 1.3.0'
   gem 'coveralls', require:false
 end
