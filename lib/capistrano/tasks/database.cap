@@ -1,0 +1,14 @@
+namespace :database do
+  task :setup => 'config/database.yml'do |t|
+    on roles(:all) do
+      upload!(t.prerequisites.first, "#{shared_path}/database.yml")
+    end
+  end
+ 
+  task :finalize do
+    on roles(:all) do
+      execute "ln -sf #{shared_path}/database.yml #{release_path}/config/database.yml"
+    end
+  end
+end
+
