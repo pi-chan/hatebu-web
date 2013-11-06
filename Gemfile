@@ -6,6 +6,7 @@ gem 'figaro'
 gem 'devise'
 gem 'omniauth-hatena'
 gem 'oauth'
+gem 'bootstrap-sass', '~> 2.3'
 
 group :development do
   gem 'growl'
@@ -14,6 +15,10 @@ group :development do
   gem 'database_cleaner'
   gem 'quiet_assets'
   gem 'pry-debugger'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano_colors'
 end
 
 group :development, :test do
@@ -33,7 +38,6 @@ group :development, :test do
   gem 'haml-rails'
   gem 'coffee-rails', '~> 4.0.0'
   gem 'sass-rails', '~> 4.0.0'
-  gem 'bootstrap-sass', '~> 2.3'
   gem 'uglifier', '>= 1.3.0'
   gem 'coveralls', require:false
 end
