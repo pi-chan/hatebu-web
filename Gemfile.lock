@@ -305,6 +305,7 @@ DEPENDENCIES
   debugger
   devise
   erb2haml
+  execjs
   figaro
   growl
   guard-rspec (~> 3.0.2)

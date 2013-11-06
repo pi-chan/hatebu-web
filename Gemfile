@@ -6,7 +6,6 @@ gem 'figaro'
 gem 'devise'
 gem 'omniauth-hatena'
 gem 'oauth'
-gem 'bootstrap-sass', '~> 2.3'
 
 group :development do
   gem 'growl'
@@ -35,12 +34,15 @@ group :development, :test do
   gem 'selenium-webdriver'
   gem 'debugger'
   gem 'erb2haml'
-  gem 'haml-rails'
-  gem 'coffee-rails', '~> 4.0.0'
-  gem 'sass-rails', '~> 4.0.0'
-  gem 'uglifier', '>= 1.3.0'
   gem 'coveralls', require:false
 end
+
+gem 'haml-rails'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass', '~> 2.3'
+gem 'uglifier', '>= 1.3.0'
+gem 'execjs'
 
 gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
