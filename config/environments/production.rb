@@ -77,4 +77,12 @@ HatebuWeb::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  Devise.setup do |config|
+    config.omniauth :hatena, ENV['HATENA_CONSUMER_KEY'], ENV['HATENA_CONSUMER_SECRET'], scope: "write_public,read_public"
+  end
+
+  config.logger = ActiveSupport::Logger.new("#{Rails.root}/log/production.log", 5, 10 * 1024 * 1024)
+  config.logger.level = Logger::INFO
+  
 end
