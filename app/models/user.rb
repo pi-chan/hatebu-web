@@ -24,5 +24,9 @@ class User < ActiveRecord::Base
     end
     user
   end
+
+  def bookmark(url)
+    true
+  end
   
 end

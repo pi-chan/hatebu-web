@@ -6,6 +6,12 @@ class ApplicationController < ActionController::Base
   before_filter :pre_action
 
   def pre_action
-    @user = current_user
+    if user_signed_in?
+      @user = current_user
+    end
+  end
+
+  def login_required
+    redirect_to login_path unless user_signed_in?
   end
 end
