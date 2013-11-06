@@ -5,6 +5,7 @@ gem 'mysql2'
 gem 'figaro'
 gem 'devise'
 gem 'omniauth-hatena'
+gem 'oauth'
 
 group :development do
   gem 'growl'

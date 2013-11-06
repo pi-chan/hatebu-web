@@ -294,6 +294,7 @@ DEPENDENCIES
   jquery-rails
   launchy
   mysql2
+  oauth
   omniauth-hatena
   poltergeist
   pry-debugger

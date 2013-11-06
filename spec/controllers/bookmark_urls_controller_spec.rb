@@ -5,6 +5,13 @@ describe BookmarkUrlsController do
 
   before do
     @user = create_user
+    response = Object.new()
+    response.instance_eval { class << self; attr_accessor :code; end; }
+
+    access_token = Object.new()
+    access_token.stub(:post).and_return(response)
+
+    OAuth::AccessToken.stub(:new).and_return(access_token)
   end
 
   
