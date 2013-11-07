@@ -28,7 +28,7 @@ HatebuWeb::Application.configure do
   config.assets.debug = true
 
   Devise.setup do |config|
-    config.omniauth :hatena, ENV['HATENA_CONSUMER_KEY'], ENV['HATENA_CONSUMER_SECRET'], scope: "write_public,read_public"
+    config.omniauth :hatena, ENV['HATENA_CONSUMER_KEY'], ENV['HATENA_CONSUMER_SECRET'], scope: "write_public,read_public,write_private,read_private"
   end
   
 end

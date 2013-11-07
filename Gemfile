@@ -17,7 +17,6 @@ group :development do
   gem 'capistrano'
   gem 'capistrano-rails'
   gem 'capistrano-bundler'
-  gem 'capistrano_colors'
 end
 
 group :development, :test do
